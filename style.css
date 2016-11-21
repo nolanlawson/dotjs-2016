@@ -1,6 +1,6 @@
 body {
   font-family: 'Roboto Slab', Arial, Helvetica, 'sans-serif';
-  color: #fafafa;
+  color: #ededed;
 }
 
 h1, h2, h3 {
@@ -19,4 +19,26 @@ h1, h2, h3 {
 }
 .remark-slide-scaler {
   box-shadow: 0 0 30px #333;
+}
+.remark-slide-content {
+  font-size: 28px;
+}
+
+a, a:visited {
+  color: #4970A0;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #5590c7;
+  text-decoration: underline;
+}
+
+.footnote {
+  font-size: 22px;
+}
+
+.muted {
+  color: #666;
+  font-size: 16px;
 }
