@@ -49,8 +49,11 @@ Well, to understand what "move the web forward" means, you need to take a look a
 
 Let's flash back to 2004, which is around the time HTML5 got started, by some motivated folks at Opera and Mozilla, in
 one of the earliest efforts to really "push the web forward." What was motivating them? Well, let's remember what was going
-on. IE's market share, including IE4, IE5, and IE6, was 90%. Mozilla, Opera, and Netscape were struggling to get a foothold. The
-W3C was focused on semantic web and XHTML.
+on. IE's market share, including IE4, IE5, and IE6, had peaked at 95%. Firefox and Opera were struggling to get a foothold. The
+W3C was focused on semantic web and XHTML 2, not web apps.
+
+Against this backdrop, a ragtag group from Mozilla and Opera put forward the first position paper on what would later become HTML5.
+Their motivating factor? A "rising tide of single-vendor solutions?"
 
 ---
 
@@ -62,6 +65,11 @@ W3C was focused on semantic web and XHTML.
 
 .footnote[.right[– [Ian Hickson, godfather of HTML5](https://youtu.be/xIxDJof7xxQ)]]
 
+???
+
+So what were these threats to the open web? Ian Hickson, then of Opera, says very bluntly that they were scared Silverlight
+would offer a better experience than the web and eventually overtake it.
+
 ---
 
 # Rising threats (cont.)
@@ -69,3 +77,9 @@ W3C was focused on semantic web and XHTML.
 > "Rushing in to stake their turf in the emerging 'rich app' market: Java (Sun), Flash (Macromedia), XUL (Mozilla), Silverlight/Avalon (Microsoft)"
 
 .footnote[.right[– ["The Web as Platform", Chris Kaminski 2004](http://www.webstandards.org/2004/10/01/the-web-as-platform/)]]
+
+???
+
+But to be fair, even though Microsoft was the 800-pound gorilla in the room, plenty of others wanted to get in on the emerging
+web app landscape. An article from 2004 notes Java, Flash, XUL, and Silverlight (then known as "project Avalon") were the primary
+targets for the recently-established WHATWG (Web Hypertext Application Technology Working Group).
