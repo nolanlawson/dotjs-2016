@@ -1,19 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Title</title>
+    <title>Service Worker and the Appification of the Web</title>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Magra|Roboto+Slab|Ubuntu+Mono" rel="stylesheet">
     <style>
-      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
-      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
-      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      body {
+        font-family: 'Roboto Slab', Arial, Helvetica, 'sans-serif';
+        color: #fafafa;
+      }
 
-      body { font-family: 'Droid Serif'; }
       h1, h2, h3 {
-        font-family: 'Yanone Kaffeesatz';
+        font-family: 'Magra', Arial, Helvetica, 'sans-serif';
         font-weight: normal;
       }
-      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+      .remark-code, .remark-inline-code {
+        font-family: 'Ubuntu Mono', monospace;
+      }
+      .remark-slide-content {
+        background-color: #111;
+      }
+      .remark-container {
+        background: #000;
+      }
+      .remark-slide-scaler {
+        box-shadow: 0 0 30px #333;
+      }
     </style>
   </head>
   <body>
@@ -39,7 +52,10 @@ class: center, middle
     <script src="https://remarkjs.com/downloads/remark-latest.min.js">
     </script>
     <script>
-      var slideshow = remark.create();
+      var slideshow = remark.create({
+        ratio: '16:9',
+        slideNumberFormat: ''
+      });
     </script>
   </body>
 </html>
