@@ -4,6 +4,8 @@ toolbox.options.debug = true;
 toolbox.precache([
   '/',
   '/readme.md',
+  '/script.js',
+  '/style.css',
   'https://remarkjs.com/downloads/remark-latest.min.js'
 ])
 toolbox.router.get('/(.*)', toolbox.fastest, {

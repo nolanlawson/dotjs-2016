@@ -1,0 +1,22 @@
+body {
+  font-family: 'Roboto Slab', Arial, Helvetica, 'sans-serif';
+  color: #fafafa;
+}
+
+h1, h2, h3 {
+  font-family: 'Magra', Arial, Helvetica, 'sans-serif';
+  font-weight: normal;
+}
+
+.remark-code, .remark-inline-code {
+  font-family: 'Ubuntu Mono', monospace;
+}
+.remark-slide-content {
+  background-color: #111;
+}
+.remark-container {
+  background: #000;
+}
+.remark-slide-scaler {
+  box-shadow: 0 0 30px #333;
+}
