@@ -112,7 +112,8 @@ competitors for HTML5.
 
 ???
 
-So this is where the inspiration for HTML5 comes from. This is why we have file uploads, CSS animations, SVG, copy-paste, video, etc. The web looked at what native plugins like Silverlight and Flash were doing, and made sure that the open web could be competitive.
+So this is where the inspiration for HTML5 comes from. This is why we have file uploads, CSS animations, SVG, 
+canvas, copy-paste, video, etc. The web looked at what native plugins like Silverlight and Flash were doing, and made sure that the open web could be competitive.
 
 And it worked! Today, Flash and Silverlight are slowly fading away. HTML5 reigns supreme.
 
