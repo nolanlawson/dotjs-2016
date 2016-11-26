@@ -133,7 +133,7 @@ Now flash forward to the 2010's, and the web has a new existential thread: nativ
 
 # Native apps dominate
 
-> "Native app users spend 18x more time in mobile apps than on the mobile web."
+> "Mobile users spend 18x more time in apps than on the web."
 
 .footnote[.right[– [Luke Wroblewski (2015)](http://www.lukew.com/ff/entry.asp?1954)]]
 
