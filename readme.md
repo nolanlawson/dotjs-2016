@@ -410,7 +410,7 @@ This is just a snapshot of our current plans, but we're on schedule to ship this
 
 ---
 
-# Backlash
+# Web skepticism
 
 > "Pushing the web forward currently means cramming in more copies of native functionality at breakneck speed — interesting stuff, mind you, but there’s just too much of it."
 
