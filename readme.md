@@ -337,7 +337,7 @@ important prerequisite for implementing Service Worker.
 
 * Runs as a Windows service
 * Can wake up the browser even when the browser is closed
-* May spawn multiple Service workers at once for performance (under debate)
+* May spawn multiple Service Workers at once for performance (under debate)
 
 ???
 
