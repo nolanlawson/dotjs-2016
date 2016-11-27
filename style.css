@@ -64,3 +64,8 @@ img.side-by-side {
 .emoji {
   font-family: "Segoe UI Emoji";
 }
+
+.remark-slide-number {
+  font-size: 18px;
+  opacity: 0.4;
+}

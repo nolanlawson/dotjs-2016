@@ -304,6 +304,9 @@ Now, it's important to note that this isn't just a copy-paste of what native pla
 can register background services that stay awake whenever your device is on, and can do whatever they want, draining
 your battery in the background. You wouldn't want every web site you visit to have those same powers.
 
+In fact, even these slides have a service worker! This is the kind of thing every web site can happily add without
+worrying about becoming a tragedy of the commons situation.
+
 --
 
 * Only HTTPS
@@ -312,7 +315,7 @@ your battery in the background. You wouldn't want every web site you visit to ha
 
 ???
 
-So Service Worker is designed very intelligently to avoid these kinds of problems. First off, it's only available on HTTPS,
+You see, Service Worker is designed very intelligently to avoid these kinds of problems. First off, it's only available on HTTPS,
 so you won't get MiTM attacked. Second, it's designed in a sort of "fire and forget" way. The browser is free to kill
 off a Service Worker whenever it wants to. Unlike a web worker, you're not supposed to have long-running processes
 in there; if you do, then they might get unceremoniously terminated. You're suposed to respond to fetch, push, and sync
