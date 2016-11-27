@@ -60,3 +60,7 @@ a:hover {
 img.side-by-side {
   margin: 0 20px;
 }
+
+.emoji {
+  font-family: "Segoe UI Emoji";
+}

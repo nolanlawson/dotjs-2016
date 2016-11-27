@@ -25,7 +25,7 @@ web platform. How they change everything.
 
 --
 
-- They're hot &#x0001f525;
+- They're hot <span class="emoji">&#x0001f525;</span>
 - They "move the web forward"
 
 ???
@@ -160,13 +160,55 @@ do it with purely open web technologies.
 
 --
 
+## ...but it might not have.
+
+???
+
+But the web didn't win by magic. It didn't win through historical inevitability. It won because it evolved, because it
+adapted to changing contexts.
+
+---
+
+# A future that could have been
+
+
+.center[<img class="side-by-side" src="img/flash.png" alt="Best viewed in Flash" height="300" width="256"/><img class="side-by-side" src="img/slight.png" alt="Best viewed in Silverlight" height="300" width="256"/>]
+
+???
+
+We could have very easily ended up in a future where web sites were optimized for Flash, or for Silverlight, or maybe
+for both, and you needed plugins to get anything done on the web. It could have looked like this.
+
+"Designed for Flash." "Works best in Silverlight!" "Java support coming soon." 
+
+You laugh, but in a sense this dystopian future isn't so far from our present reality.
+Because although the web defeated Flash and Silverlight, a new
+challenger emerged. Today we have this:
+
+---
+
+.center[<img class="side-by-side" src="img/app_store.png" alt="Get it on the App Store" height="130"/><img class="side-by-side" src="img/google_play.png" alt="Get it on Google Play" height="130"/>]
+
+???
+
+Yes, this is exactly what native mobile platforms are today. "Get it on the App Store." "Android version coming soon!" People are rebuilding the same app over and over again,
+for different native platforms, instead of making the web their primary focus.
+
+---
+
+# HTML5 won!
+
+???
+
+Because the fact is that HTML5 did indeed win...
+
+--
+
 ## ...on desktop.
 
 ???
 
-But there's a new threat. Because the web only really won on desktop.
-
-Ask yourself: what do you use for your email client on desktop? Probably a web browser. On mobile? Probably a native app.
+On desktop. But there's a new threat.
 
 ---
 
@@ -192,8 +234,8 @@ So now let's flash forward to the 2010's, really starting in 2007, and the web h
 ???
 
 As a share of user attention, native mobile apps are clearly winning. You can argue whether or not this is the right
-metric, but it's the reverse of desktop. On desktop, people spend most of their time in web browsers. On mobile, it's
-the opposite.
+metric, but it's the reverse of desktop. Ask yourself: on desktop, do you use a web browser or a native app for email?
+Now what about mobile? For most folks, it's the exact opposite.
 
 ---
 
@@ -201,12 +243,15 @@ the opposite.
 
 ???
 
-So as Bruce argues in his talk, this is the context in which PWAs and Service Workers were born. In the same way
+And in a sense, this is the new context for Progressive Web Apps (PWAs). In the same way
 that HTML5 was a response to the challenges presented by Flash and Silverlight, PWAs are a response to native mobile apps.
 
 --
 
-## Progressive Web Apps: collection of web APIs to match native behavior
+* Offline
+* Push notifications
+* Background sync
+* Multithreading
 
 
 ---
@@ -242,14 +287,7 @@ The web is like David Bowie. Yes, it changes from decade to decade. Yes, maybe i
 
 But this doesn't happen by magic. When the web was challenged by Flash and Silverlight, it could have lost. We might have ended up in a future where every web site says, "Designed for Macromedia Flash." Or "Designed for Flash or Silverlight. Java support coming soon!" You laugh, but this could have happened.
 
----
 
-.center[<img class="side-by-side" src="img/app_store.png" alt="Get it on the App Store" height="130"/><img class="side-by-side" src="img/google_play.png" alt="Get it on Google Play" height="130"/>]
-
-???
-
-And in fact, this is how native apps look today. "Get it on the App Store." "Android version coming soon!" People are rebuilding the same app over and over again,
-for different native platforms, instead of making the web their primary focus.
 
 But you can't really blame web developers, or users. In the end, "the customer is always right." If people are spending more time in native mobile apps than
 in mobile web apps, it's because it's offering something they can't get elsewhere. It's because somehow it's worth it to rebuild for multiple proprietary platforms. This is exactly the same situation we were in in 2004, when a lot of folks were concluding that the web wasn't up to snuff, and that if you wanted
