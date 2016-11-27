@@ -381,9 +381,9 @@ What will this look like? Our current plan looks like this:
 --
 
 - Bing crawls web sites
-- Any sites with a Web App Manifest are ingested into the Windows Store
-- Apps in the store are true apps
-- Site owners can "claim" their apps or just let them chill
+- Any sites with an App Manifest are ingested into Windows Store
+- Webpps in the store are true apps
+- Site owners can "claim" their sites
 
 ???
 
