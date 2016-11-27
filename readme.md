@@ -8,11 +8,20 @@ Nolan Lawson
 
 ???
 
-This is a talk about Service Worker and how they "appify" the web.
+This is a talk about Service Workers and how they "appify" the web.
+
+I had an alternative title for this talk, which was "the appy-ness of the web." But for a French audience,
+"appy-ness" might be too hard to distinguish from "happiness." So let's just stick to "appification," which is
+less ambiguous.
 
 ---
 
 # Service Workers
+
+???
+
+Now, if you're a web developer, you've probably heard a lot about Service Workers. How they're going to "revolutionize" the
+web platform. How they change everything.
 
 --
 
@@ -20,9 +29,6 @@ This is a talk about Service Worker and how they "appify" the web.
 - They "move the web forward"
 
 ???
-
-Now, if you're like me, you've probably heard a lot about Service Workers. How they're going to "revolutionize" the
-web platform. How you should "look busy" because they're coming. How they change everything.
 
 So Service Workers are hot, and they "move the web forward."
 
@@ -32,24 +38,22 @@ So Service Workers are hot, and they "move the web forward."
 
 ???
 
-But what exactly does that mean? We hear this phrase bandied around a lot but some things aren't clear: what direction
+But what exactly does that mean? We hear this phrase bandied around a lot, but some things aren't clear: what direction
 is the web moving in? Why does it need to move at all? Why is Service Worker an important part of that?
 
 Well, to understand what "move the web forward" means, you need to take a look at where the web has been. I'm a firm
 believer that history can provide valuable lessons for the future – I know, a controversial opinion an industry where
 we throw out our Javascript framework every 2 years! – but in this case it's definitely true.
 
----
-
-# Lessons from history
+--
 
 > "History doesn't repeat itself, but it does rhyme."
 
-.footnote[.right[– [Unattributed proverb](https://en.wikiquote.org/wiki/Talk:History)]]
+.footnote[.right[– [Modern proverb](https://en.wikiquote.org/wiki/Talk:History)]]
 
 ???
 
-Or, in a quote frequently mis-attributed to Mark Twain (actually its origin is unknown).
+Or, in a quote frequently mis-attributed to Mark Twain, "History doesn't repeat itself, but it does rhyme."
 
 ---
 
@@ -58,8 +62,9 @@ Or, in a quote frequently mis-attributed to Mark Twain (actually its origin is u
 ???
 
 Let's flash back to 2004, which is around the time HTML5 got started, in
-one of the earliest efforts to really "push the web forward." What was motivating it? Well, let's remember what was going
-on at the time. IE's market share, including IE4, IE5, and IE6, had peaked at 95%. Firefox and Opera were struggling to get a foothold. The
+one of the earliest efforts to really "push the web forward." What was motivating it?
+
+Well, let's remember the context of the time. IE's market share, including IE4, IE5, and IE6, had peaked at 95%. Firefox and Opera were struggling to get a foothold. The
 W3C was focused on semantic web and XHTML 2, not web apps.
 
 --
@@ -77,6 +82,10 @@ Their motivating factor? A "rising tide of single-vendor solutions?"
 
 # Rising threats
 
+???
+
+So what were these threats to the open web?
+
 --
 
 > "We were really scared of Silverlight."
@@ -85,7 +94,7 @@ Their motivating factor? A "rising tide of single-vendor solutions?"
 
 ???
 
-So what were these threats to the open web? Ian Hickson, then of Opera, says very bluntly that they were scared Silverlight
+Ian Hickson, then of Opera, says very bluntly that they were scared Silverlight (then known as Project Avalon)
 would offer a better experience than the web and eventually overtake it.
 
 ---
@@ -96,26 +105,68 @@ would offer a better experience than the web and eventually overtake it.
 > * Java (Sun)
 > * Flash (Macromedia)
 > * XUL (Mozilla)
-> * Silverlight/Avalon (Microsoft)
+> * Silverlight (Microsoft)
 
 .footnote[.right[– [Chris Kaminski, Web Standards Project (2004)](http://www.webstandards.org/2004/10/01/the-web-as-platform/)]]
 
 ???
 
-But to be fair, even though Microsoft was the 800-pound gorilla in the room, plenty of others wanted to get in on the emerging
-web app landscape. An article from 2004 notes Java, Flash, XUL, and Silverlight (then known as "project Avalon") were the primary
-competitors for HTML5.
+But even though Microsoft was the 800-pound gorilla in the room, plenty of others wanted to get in on the emerging
+web app landscape. An article from 2004 notes Java, Flash, and XUL, and Silverlight were the primary competitors for HTML5.
+
+---
+
+# HTML5 was a response to Flash/Silverlight
+
+???
+
+So in this light, HTML5, and the work of the WHAT WG (Web Hypertext Application Technology Working Group) on what would later
+become HTML5 can be seen as a response to Flash.
+
+At the time, if you were build rich web applications, Flash, Java applets,
+Silverlight, and similar technologies were compelling alternatives to HTML because there was a lot you couldn't do with
+the open web. Today you can.
+
+--
+
+* File upload
+* Video
+* Clipboard
+* Canvas
+* SVG
+* Animations
+* etc.
+
+???
+
+So this is where the inspiration for HTML5 comes from. This is why we have file uploads, SVG, CSS animations
+canvas, copy-paste, video, etc. The web looked at what native plugins like Silverlight and Flash were doing, 
+and made sure that the open web could be competitive with that.
+
+Otherwise, users would have just voted with their feet, and Flash, Silverlight, and Java would have continued to grow dominant.
 
 ---
 
 # HTML5 won!
 
+
 ???
 
-So this is where the inspiration for HTML5 comes from. This is why we have file uploads, CSS animations, SVG, 
-canvas, copy-paste, video, etc. The web looked at what native plugins like Silverlight and Flash were doing, and made sure that the open web could be competitive.
+And it worked! Today, Flash and Silverlight are slowly fading away. Java applets are a distant memory. 
+HTML5 reigns supreme.
 
-And it worked! Today, Flash and Silverlight are slowly fading away. HTML5 reigns supreme.
+If you want to build a compelling web application, whether it's an email app, a video website, or a 3D game, you can
+do it with purely open web technologies.
+
+--
+
+## ...on desktop.
+
+???
+
+But there's a new threat. Because the web only really won on desktop.
+
+Ask yourself: what do you use for your email client on desktop? Probably a web browser. On mobile? Probably a native app.
 
 ---
 
@@ -128,7 +179,7 @@ And it worked! Today, Flash and Silverlight are slowly fading away. HTML5 reigns
 
 ???
 
-Now flash forward to the 2010's, and the web has a new existential thread: native mobile platforms.
+So now let's flash forward to the 2010's, really starting in 2007, and the web has a new existential thread: native mobile apps.
 
 ---
 
@@ -141,7 +192,8 @@ Now flash forward to the 2010's, and the web has a new existential thread: nativ
 ???
 
 As a share of user attention, native mobile apps are clearly winning. You can argue whether or not this is the right
-metric, but it's the reverse of desktop. On desktop, people spend most of their time in web browsers.
+metric, but it's the reverse of desktop. On desktop, people spend most of their time in web browsers. On mobile, it's
+the opposite.
 
 ---
 
@@ -151,6 +203,11 @@ metric, but it's the reverse of desktop. On desktop, people spend most of their 
 
 So as Bruce argues in his talk, this is the context in which PWAs and Service Workers were born. In the same way
 that HTML5 was a response to the challenges presented by Flash and Silverlight, PWAs are a response to native mobile apps.
+
+--
+
+## Progressive Web Apps: collection of web APIs to match native behavior
+
 
 ---
 
