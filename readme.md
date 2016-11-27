@@ -308,6 +308,7 @@ your battery in the background. You wouldn't want every web site you visit to ha
 
 * Only HTTPS
 * Fire-and-forget
+* Notifications require permission
 
 ???
 
