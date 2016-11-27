@@ -433,39 +433,3 @@ It's easy to take the web for granted. But the web doesn't exist in a vacuum; it
 ???
 
 The web is like David Bowie. Yes, it changes from decade to decade. Yes, maybe it didn't always invent musical genre or hairstyle that he made famous. But Bowie is still identifiable from year to year. And when he does borrow something from the context around him, be it glam rock or kraut rock, he does it *best*. That's the web.
-
----
-
-.center[<img class="side-by-side" src="img/flash.png" alt="Best viewed in Flash" height="300" width="256"/><img class="side-by-side" src="img/slight.png" alt="Best viewed in Silverlight" height="300" width="256"/>]
-
-???
-
-But this doesn't happen by magic. When the web was challenged by Flash and Silverlight, it could have lost. We might have ended up in a future where every web site says, "Designed for Macromedia Flash." Or "Designed for Flash or Silverlight. Java support coming soon!" You laugh, but this could have happened.
-
-
-
-But you can't really blame web developers, or users. In the end, "the customer is always right." If people are spending more time in native mobile apps than
-in mobile web apps, it's because it's offering something they can't get elsewhere. It's because somehow it's worth it to rebuild for multiple proprietary platforms. This is exactly the same situation we were in in 2004, when a lot of folks were concluding that the web wasn't up to snuff, and that if you wanted
-to build a really great experience, you needed to look to Flash, Java, or Silverlight.
-
----
-
-# What are native apps good at?
-
---
-
-* Offline
-* Push notifications
-* Background sync
-* Multithreading
-
-???
-
-OK, so how is service worker addressing this? Well, let's look at some of the stuff that native apps are particularly good at, compared to web sites.
-
-- Offline
-- Push notifications
-- Background sync
-- Multithreading
-
-Hm, and interestingly, Service Worker addresses all four of these! That's quite the hat trick.
