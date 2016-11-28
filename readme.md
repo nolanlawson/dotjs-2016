@@ -10,6 +10,8 @@ Nolan Lawson
 
 This is a talk about Service Workers and how they "appify" the web.
 
+Alternative title for my French audience: "Service Workers and web appy-ness." Francophones will get the joke.
+
 ---
 
 # Service Workers
@@ -27,7 +29,9 @@ web platform. How they change everything.
 ???
 
 So if you know nothing else about Service Workers, what can you conclude? Well, they're certainly 
-"hot," and they "move the web forward."
+hot, and they "move the web forward."
+
+But what exactly does "move the web forward" mean?
 
 ---
 
@@ -35,7 +39,7 @@ So if you know nothing else about Service Workers, what can you conclude? Well, 
 
 ???
 
-But what exactly does "move the web forward" mean? We hear this phrase bandied around a lot, but 
+We hear this phrase bandied around a lot, but 
 what direction is the web moving in? Why does it need to move at all? Why is Service Worker an important part of that?
 
 Well, to understand what "move the web forward" means, you need to take a look at where the web has been. I'm a firm
@@ -58,7 +62,7 @@ As the proverb goes, "history doesn't repeat itself, but it does rhyme."
 
 ???
 
-Soet's flash back to 2004, which is around the time HTML5 got started, in
+So let's flash back to 2004, which is around the time HTML5 got started, in
 one of the earliest efforts to really "push the web forward." What was motivating it?
 
 Well, let's remember the context of the time. IE's market share, including IE4, IE5, and IE6, had peaked at 95%. Firefox and Opera were struggling to get a foothold. The W3C was focused on semantic web and XHTML 2, but not so much on web apps, on so called "rich" web experiences.
@@ -72,7 +76,7 @@ Well, let's remember the context of the time. IE's market share, including IE4, 
 ???
 
 Against this backdrop, a ragtag group from Mozilla and Opera put forward the first position paper on what would later become HTML5.
-Their motivating factor? A "rising tide of single-vendor solutions?"
+Their motivating factor? A "rising threat of single-vendor solutions?"
 
 ---
 
@@ -97,13 +101,27 @@ So what were these rising threats?
 Well, as this article from the Web Standards Project says, there were lots of vendors "rushing in to stake their turf"
 in the emerging "rich app" market, including Java, Flash, XUL, and Silverlight (then known as Project Avalon).
 
+Ian Hickson, Godfather of HTML5, also said ["we were really scared of Silverlight"](https://youtu.be/xIxDJof7xxQ).
+
 ---
 
-# Rising threats
+# Flash/Silverlight/etc posed a real threat
 
 ???
 
-Or as Ian Hickson, who is often thought of as the Godfather of HTML5 put it, "we were really scared of Silverlight."
+So at the time, technologies like Flash and Silverlight posed a real challenge to the open web.
+
+--
+
+## In many ways, they were just better
+
+???
+
+If you were building rich web applications, then Flash,
+Silverlight, and similar technologies were compelling alternatives to the open web, because they had a lot more crucial features that the web lacked.
+
+You can't really blame developers or users for preferring these platforms at the time. It was just a better way
+to build good user experiences. People were voting with their feet, against the web.
 
 ---
 
@@ -111,19 +129,9 @@ Or as Ian Hickson, who is often thought of as the Godfather of HTML5 put it, "we
 
 ???
 
-So in this light, HTML5 can be seen as a response to Flash and Silverlight.
-
-At the time, if you were building rich web applications, then Flash, Java applets,
-Silverlight, and similar technologies were compelling alternatives to HTML because there was a lot you couldn't do with
-the open web.
-
-These were proprietary, vendor-specific technologies that fed off of the web, and threatend to overtake it.
-
-And to be fair, you can't really blame developers or users for preferring these plugins at the time. It was just a better way
-to build good user experiences. People were voting with their feet, against the web.
+So in this light, HTML5 can be seen as a response to the challenges to the web posed by Flash and Silverlight.
 
 --
-
 * File upload
 * Video
 * Clipboard
@@ -140,7 +148,7 @@ This is where a lot of features of HTML5 come from. This is why we have file upl
 Now, this wasn't a matter of just copy-pasting those APIs from Flash or Silverlight and calling it a day. There was hard work here
 to make sure these APIs were standardized, and that they didn't sacrifice user security, privacy, and performance for the sake of new features.
 
-But the point is that the web didn't just stand still when it was getting outcompeted. It looked at what native plugins like Silverlight and Flash were doing, 
+But the point is that the web didn't just stand still when it was getting outcompeted. It looked at what native platforms like Silverlight and Flash were doing, 
 and made sure it could remain competitive.
 
 ---
@@ -153,7 +161,7 @@ and made sure it could remain competitive.
 And it worked! Today, Flash and Silverlight are slowly fading away. Java applets are a distant memory. 
 HTML5 reigns supreme.
 
-Today, if you want to build a rich, compelling desktop application – whether it's an email app, a video-sharing site, or a 3D game – you can
+Today, if you want to build a rich desktop application – whether it's an email app, a video-sharing site, or a 3D game – you can
 do it today with purely open web technologies. This is an amazing accomplishment.
 
 --
@@ -173,7 +181,6 @@ It won because it evolved, because it adapted to changing contexts.
 
 # A future that could have been
 
-
 .center[<img class="side-by-side" src="img/flash.png" alt="Best viewed in Flash" height="300" width="256"/><img class="side-by-side" src="img/slight.png" alt="Best viewed in Silverlight" height="300" width="256"/>]
 
 ???
@@ -184,16 +191,17 @@ for both. Maybe the web would have been segregated based on proprietary technolo
 "Designed for Flash." "Works best in Silverlight!" "Java support coming soon." 
 
 You laugh, but in a sense this possible future isn't so far from our present reality.
-Because although the web defeated Flash and Silverlight, a new
-challenger emerged. Today we have this:
+The web may have defeated Flash and Silverlight, but today we have this:
 
 ---
+
+# Today's reality
 
 .center[<img class="side-by-side" src="img/app_store.png" alt="Get it on the App Store" height="130"/><img class="side-by-side" src="img/google_play.png" alt="Get it on Google Play" height="130"/>]
 
 ???
 
-"Get it on the iOS App Store." "Get it from Google Play." "Windows Phone version coming soon!" "Amazon Fire version coming soon!" 
+"Download on the App Store." "Get it on Google Play." "Windows Phone version coming soon!" "Amazon Fire version coming soon!" 
 
 Today, for many developers, native mobile platforms offer a compelling alternative to the web. The same apps that are primarily
 consumed via the web on desktop – social networks, email clients, news readers – are today largely consumed via native apps on mobile.
@@ -264,12 +272,11 @@ rather than building for the web? What do they get that the web isn't offering?
 * Offline
 * Push notifications
 * Background sync
-* Multithreading
 
 ???
 
 Well, there are lots of reasons, but here are a handful.
-Offline support, push notifications, background sync, multithreading.
+Offline support, push notifications, background sync.
 Incidentally these are all things that Service Worker brings.
 
 ---
@@ -516,8 +523,8 @@ It doesn't always have the latest features. It might not boast the most seamless
 But the web is unique in that it's the one platform that isn't owned by any one person or organization. As Anne van Kesteren has said,
 [the web is a _public good_](https://annevankesteren.nl/presentations/lucerne).
 
-Anyone in the world can make a web site, and in principle anyone in the world can make their own web browser,
-as recent examples like Vivaldi and Brave have shown.
+Anyone in the world can make a web site, and the standards behind web browsers are designed out in the open, unencumbered
+by patents, or royalties, or censors, or gatekeepers.
 
 ---
 
@@ -526,29 +533,27 @@ background-image: url(img/webworks.png)
 ???
 
 This is a mural we have in the Edge office, created by the wonderful JThree Concepts. The title is "The web works for everyone."
-So this is my challenge to you: remember what makes the web awesome – that it's not about any one browser, or any one vendor – and
-make sure that your web sites really do work for everyone.
 
-Yes, I know you probably develop primarily in Chrome. Fire up Firefox from time to time! See what your site looks like in Safari.
-Test it out in Edge!
-
-Go grab a cheap Windows laptop or an old Android phone and make sure your site performs well for users who can't afford a 16-core MacBook Pro.
+I really love this vision of the web as a diverse place where all kinds of people with all kinds of browsers and devices can
+enjoy this one experience together.
 
 ---
 
-# Yes, I know you're on a Mac
+# Test on more than one browser!
 
 ???
 
-And quick side note: yes, I know you're probably on a Mac. But if you want to test IE or Edge, we have free virtual machines.
+So even if you primarily develop on Chrome, fire up Firefox from time to time! See what your site looks like in Safari.
+Give Edge a whirl!
+
+And especially, go grab a cheap Windows laptop or an old Android phone and make sure your site performs well for users who can't afford a 16-core MacBook Pro.
 
 --
-
 ## Free IE/Edge VMs: http://edge.ms
 
 ???
 
-You can go to edge dot ms and get a free VM. Here's the URL; go here and click Tools -> Virtual Machines, and load it up in VirtualBox. I'll wait.
+And quick side note: if you're on a Mac and you want to test IE or Edge, we have free virtual machines.
 
 ---
 
@@ -560,11 +565,9 @@ Note I'm not asking you to make your web sites look amazing in every browser. Ac
 enhancement!
 
 Features like Service Worker should work great for browsers that support Service Worker, and just okay for
-browsers that don't. That's great, because that's what encourages my team to actually build the feature! And it's what
-might encourage the other browser vendor that we all want to implement Service Worker to implement it.
+browsers that don't. That's great, because that's what encourages browser vendors to actually build the feature!
 
-If you don't use the feature,
-browser vendors have no reason to implement it.
+If you don't use the feature, browser vendors have no reason to implement it.
 
 ---
 
@@ -573,10 +576,11 @@ browser vendors have no reason to implement it.
 ???
 
 So that, to me, this is the true definition of "move the web forward." As browser vendors, we'll work hard
-to bring those much-desired features from proprietary platforms that you developers want so badly, as we've done with
+to bring those much-desired features from other platforms that you developers are clamoring for, as we've done with
 Flash and Silverlight, and as we're now doing with native mobile platforms.
 
-All we ask in return
-is that you work with us to make sure the web doesn't work for just one browser, or just one vendor. Even as the web
-becomes more "appy," let's make sure the web remains open, and pluralistic, and that it works for everyone regardless
+And you can – and should! – use these awesome new features. All we ask in return
+is that you help make sure the web doesn't work for just one browser or just one vendor.
+
+Even as the web becomes more "appy," let's make sure the web remains open, and pluralistic, and that it works for everyone regardless
 of their device or browser. Thank you.
