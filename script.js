@@ -4,7 +4,8 @@
     slideNumberFormat: 'nolanlawson.github.io/dotjs-2016',
     sourceUrl: 'readme.md'
   });
-  if ('serviceWorker' in navigator) {
+  // disable SW for now
+  /*if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('sw.js');
-  }
+  }*/
 })();
