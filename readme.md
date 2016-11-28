@@ -290,7 +290,7 @@ that acts as a background proxy between your web site and the server. If you've 
 proxies, just imagine you have that, but on the client.
 
 --
-* Intercept fetch events, respond with cache (offline)
+* Intercept fetch events, respond with cache
 
 ???
 
@@ -298,7 +298,7 @@ So you can intercept any request – for images, HTML, CSS, JavaScript, anything
 network asset, or whatever you want. This allows for very flexible offline scenarios.
 
 --
-* Intercept push events (push)
+* Intercept push events
 
 ???
 
@@ -306,7 +306,7 @@ You can also register for push events, which allows you to do push notifications
 a client-side database.
 
 --
-* Intercept sync/periodic events (background sync)
+* Intercept sync/periodic events
 
 ???
 
