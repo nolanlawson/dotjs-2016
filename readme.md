@@ -65,7 +65,9 @@ As the proverb goes, "history doesn't repeat itself, but it does rhyme."
 So let's flash back to 2004, which is around the time HTML5 got started, in
 one of the earliest efforts to really "push the web forward." What was motivating it?
 
-Well, let's remember the context of the time. IE's market share, including IE4, IE5, and IE6, had peaked at 95%. Firefox and Opera were struggling to get a foothold. The W3C was focused on semantic web and XHTML 2, but not so much on web apps, on so called "rich" web experiences.
+Well, let's remember the context of the time. IE6 was the most popular browser, with [80% market share](http://news.bbc.co.uk/2/hi/technology/4037833.stm). The other top browsers were IE5 and IE4, adding up to 95% market share for IE. Firefox and Opera took up about 5% combined. So IE6 was the average user experience; it was a much less capable web than we have today..
+
+At the same time, the W3C (the standards body that defines the web) was focused on semantic web and XHTML 2, but not so much on web apps, on so called "rich" web experiences.
 
 --
 
@@ -92,7 +94,7 @@ So what were these rising threats?
 > * Java (Sun)
 > * Flash (Macromedia)
 > * XUL (Mozilla)
-> * Silverlight (Microsoft)
+> * Silverlight/Avalon (Microsoft)
 
 .footnote[.right[– [Chris Kaminski, Web Standards Project (2004)](http://www.webstandards.org/2004/10/01/the-web-as-platform/)]]
 
@@ -117,7 +119,9 @@ So at the time, technologies like Flash and Silverlight posed a real challenge t
 
 ???
 
-If you were building rich web applications, then Flash,
+Because in many ways, they were just better.
+
+If you wanted to build really cutting-edge web applications, then Flash,
 Silverlight, and similar technologies were compelling alternatives to the open web, because they had a lot more crucial features that the web lacked.
 
 You can't really blame developers or users for preferring these platforms at the time. It was just a better way
@@ -129,7 +133,7 @@ to build good user experiences. People were voting with their feet, against the 
 
 ???
 
-So in this light, HTML5 can be seen as a response to the challenges to the web posed by Flash and Silverlight.
+So in this light, the movement towards HTML5, which began in 2004, can be seen as a response to the challenges to the web posed by Flash and Silverlight.
 
 --
 * File upload
@@ -146,9 +150,9 @@ And ultimately this competitive environment was good for the web.
 This is where a lot of features of HTML5 come from. This is why we have file uploads, video, canvas, clipboard, SVG, CSS animations, etc.
 
 Now, this wasn't a matter of just copy-pasting those APIs from Flash or Silverlight and calling it a day. There was hard work here
-to make sure these APIs were standardized, and that they didn't sacrifice user security, privacy, and performance for the sake of new features.
+to make sure these APIs were standardized, and that they didn't sacrifice user security, privacy, and performance model of the web for the sake of new features.
 
-But the point is that the web didn't just stand still when it was getting outcompeted. It looked at what native platforms like Silverlight and Flash were doing, 
+But the web didn't just stand still when it was getting outcompeted. It looked at what native platforms like Silverlight and Flash were doing, 
 and made sure it could remain competitive.
 
 ---
