@@ -10,10 +10,6 @@ Nolan Lawson
 
 This is a talk about Service Workers and how they "appify" the web.
 
-I had an alternative title for this talk, which was "the appy-ness of the web." But for a French audience,
-"appy-ness" might be too hard to distinguish from "happiness." So let's just stick to "appification," which is
-less ambiguous.
-
 ---
 
 # Service Workers
@@ -30,9 +26,8 @@ web platform. How they change everything.
 
 ???
 
-So if you know nothing else about Service Workers, you can conclude that they're hot, and they "move the web forward."
-
-But what exactly does that mean? We hear this phrase bandied around a lot, but some things aren't clear.
+So if you know nothing else about Service Workers, what can you conclude? Well, they're certainly 
+"hot," and they "move the web forward."
 
 ---
 
@@ -40,7 +35,8 @@ But what exactly does that mean? We hear this phrase bandied around a lot, but s
 
 ???
 
-What direction is the web moving in? Why does it need to move at all? Why is Service Worker an important part of that?
+But what exactly does "move the web forward" mean? We hear this phrase bandied around a lot, but 
+what direction is the web moving in? Why does it need to move at all? Why is Service Worker an important part of that?
 
 Well, to understand what "move the web forward" means, you need to take a look at where the web has been. I'm a firm
 believer that history can provide valuable lessons for the future – I know, a controversial opinion an industry where
@@ -54,7 +50,7 @@ we throw out our Javascript framework every 2 years! – but in this case it's d
 
 ???
 
-Or, in a quote frequently mis-attributed to Mark Twain, "History doesn't repeat itself, but it does rhyme."
+As the proverb goes, "history doesn't repeat itself, but it does rhyme."
 
 ---
 
@@ -62,10 +58,10 @@ Or, in a quote frequently mis-attributed to Mark Twain, "History doesn't repeat 
 
 ???
 
-Let's flash back to 2004, which is around the time HTML5 got started, in
+Soet's flash back to 2004, which is around the time HTML5 got started, in
 one of the earliest efforts to really "push the web forward." What was motivating it?
 
-Well, let's remember the context of the time. IE's market share, including IE4, IE5, and IE6, had peaked at 95%. Firefox and Opera were struggling to get a foothold. The W3C was focused on semantic web and XHTML 2, but not so much on pushing the envelope on the user experience for web sites. They weren't focused on web apps.
+Well, let's remember the context of the time. IE's market share, including IE4, IE5, and IE6, had peaked at 95%. Firefox and Opera were struggling to get a foothold. The W3C was focused on semantic web and XHTML 2, but not so much on web apps, on so called "rich" web experiences.
 
 --
 
@@ -88,19 +84,6 @@ So what were these rising threats?
 
 --
 
-> "We were really scared of Silverlight."
-
-.footnote[.right[– [Ian Hickson (2008)](https://youtu.be/xIxDJof7xxQ)]]
-
-???
-
-Ian Hickson, then of Opera, says very bluntly that they were scared that Microsoft Silverlight (then known as Project Avalon)
-would offer a better experience than the web and eventually overtake it.
-
----
-
-# Rising threats (cont.)
-
 > Many vendors "rushing in to stake their turf":
 > * Java (Sun)
 > * Flash (Macromedia)
@@ -111,8 +94,16 @@ would offer a better experience than the web and eventually overtake it.
 
 ???
 
-But even though Microsoft was the 800-pound gorilla in the room, plenty of others wanted to get in on the emerging
-web app landscape. An article from 2004 notes Java, Flash, and XUL, and Silverlight were the primary competitors for HTML5.
+Well, as this article from the Web Standards Project says, there were lots of vendors "rushing in to stake their turf"
+in the emerging "rich app" market, including Java, Flash, XUL, and Silverlight (then known as Project Avalon).
+
+---
+
+# Rising threats
+
+???
+
+Or as Ian Hickson, who is often thought of as the Godfather of HTML5 put it, "we were really scared of Silverlight."
 
 ---
 
@@ -120,15 +111,16 @@ web app landscape. An article from 2004 notes Java, Flash, and XUL, and Silverli
 
 ???
 
-So in this light, HTML5, and the work of the WHAT WG (Web Hypertext Application Technology Working Group) on what would later
-become HTML5 can be seen as a response to Flash.
+So in this light, HTML5 can be seen as a response to Flash and Silverlight.
 
 At the time, if you were building rich web applications, then Flash, Java applets,
 Silverlight, and similar technologies were compelling alternatives to HTML because there was a lot you couldn't do with
 the open web.
 
-You can't really blame developers or users for preferring Flash or Silverlight at the time; it was just a better way
-to build good user experiences, so people voted with their feet.
+These were proprietary, vendor-specific technologies that fed off of the web, and threatend to overtake it.
+
+And to be fair, you can't really blame developers or users for preferring these plugins at the time. It was just a better way
+to build good user experiences. People were voting with their feet, against the web.
 
 --
 
@@ -142,11 +134,14 @@ to build good user experiences, so people voted with their feet.
 
 ???
 
-This is where a lot of features of HTML5 come from. This is why we have file uploads, SVG, CSS animations
-canvas, copy-paste, video, etc. The web looked at what native plugins like Silverlight and Flash were doing, 
-and made sure that the open web could be competitive with that.
+And ultimately this competitive environment was good for the web. 
+This is where a lot of features of HTML5 come from. This is why we have file uploads, video, canvas, clipboard, SVG, CSS animations, etc.
 
-Otherwise, users would have just voted with their feet, and Flash, Silverlight, and Java would have continued to grow dominant.
+Now, this wasn't a matter of just copy-pasting those APIs from Flash or Silverlight and calling it a day. There was hard work here
+to make sure these APIs were standardized, and that they didn't sacrifice user security, privacy, and performance for the sake of new features.
+
+But the point is that the web didn't just stand still when it was getting outcompeted. It looked at what native plugins like Silverlight and Flash were doing, 
+and made sure it could remain competitive.
 
 ---
 
@@ -158,8 +153,8 @@ Otherwise, users would have just voted with their feet, and Flash, Silverlight, 
 And it worked! Today, Flash and Silverlight are slowly fading away. Java applets are a distant memory. 
 HTML5 reigns supreme.
 
-If you want to build a compelling web application, whether it's an email app, a video website, or a 3D game, you can
-do it today with purely open web technologies.
+Today, if you want to build a rich, compelling desktop application – whether it's an email app, a video-sharing site, or a 3D game – you can
+do it today with purely open web technologies. This is an amazing accomplishment.
 
 --
 
@@ -167,7 +162,11 @@ do it today with purely open web technologies.
 
 ???
 
-But the web didn't win by magic. It didn't win through historical inevitability, or birthright.
+But the web isn't something that just automatically wins. It won because people at browser vendors and
+in the larger web community fought to keep it competitive.
+
+It's not a fait accompli that "the web always wins."
+The web didn't win through magic, or historical inevitability, or birthright.
 It won because it evolved, because it adapted to changing contexts.
 
 ---
@@ -180,11 +179,11 @@ It won because it evolved, because it adapted to changing contexts.
 ???
 
 We could have very easily ended up in a future where web sites were optimized for Flash, or for Silverlight, or maybe
-for both, and you needed plugins to get anything done on the web. It could have looked like this.
+for both. Maybe the web would have been segregated based on proprietary technologies.
 
 "Designed for Flash." "Works best in Silverlight!" "Java support coming soon." 
 
-You laugh, but in a sense this dystopian future isn't so far from our present reality.
+You laugh, but in a sense this possible future isn't so far from our present reality.
 Because although the web defeated Flash and Silverlight, a new
 challenger emerged. Today we have this:
 
@@ -194,12 +193,12 @@ challenger emerged. Today we have this:
 
 ???
 
-"Get it on the iOS App Store." "Android version coming soon!" 
+"Get it on the iOS App Store." "Get it from Google Play." "Windows Phone version coming soon!" "Amazon Fire version coming soon!" 
 
-People are rebuilding the same app over and over again, for different proprietary native platforms,
-instead of making the web their primary focus.
+Today, for many developers, native mobile platforms offer a compelling alternative to the web. The same apps that are primarily
+consumed via the web on desktop – social networks, email clients, news readers – are today largely consumed via native apps on mobile.
 
-This is the new threat to the web today.
+It turns out the web only really won on desktop. When mobile devices, and their accompanying app ecosystems, started to grow dominant, the web was largely unprepared. HTML5 wasn't enough.
 
 ---
 
@@ -212,8 +211,8 @@ This is the new threat to the web today.
 
 ???
 
-As Bruce Lawson says, today there's a new existential threat to the web. But this time it's not Flash, Silverlight, Java, or
-similar platforms – it's native apps, which are born of the web, live alongisde the web, and arguably are killing it.
+As Bruce Lawson notes, today there's a new existential threat to the web. But this time it's not Flash or Silverlight –
+it's native apps, which are feeding off the web, and arguably killing the web.
 
 ---
 
@@ -235,7 +234,7 @@ Now what about mobile? For most folks, it's the exact opposite.
 
 ???
 
-So in a sense, this is the new context for Progressive Web Apps (PWAs). In the same way
+So in a sense, this is where Progressive Web Apps (or PWAs) come in. In the same way
 that HTML5 was a response to the challenges presented by Flash and Silverlight, PWAs are a response to native mobile apps.
 
 --
@@ -246,9 +245,9 @@ that HTML5 was a response to the challenges presented by Flash and Silverlight, 
 
 ???
 
-Like HTML5 before it, PWAs are less a single monolithic technology and more a loose collection of APIs defining new
-capabilities for the web. The two most important are Service Worker and App Manifests. Let's see how Service Worker
-fits into this.
+And like HTML5 before it, PWAs are less a single monolithic technology and more a loose collection of APIs defining new
+capabilities for the web. The two most important are Service Worker and App Manifests. I'll talk about App Manifest
+later, but first let's delve into the most important one, Service Worker. Where does it fit in?
 
 ---
 
@@ -256,27 +255,26 @@ fits into this.
 
 ???
 
-And to answer that, let's try to figure out what native apps are so darn good at in the first place? Why are folks
-preferring to build for native rather than building for the web? What do they get that the web isn't offering?
+Well to answer that, let's first try to figure out what native apps are so darn good at in the first place? Why are developers
+preferring to build for native (at greater cost, since they have to build the same app multiple times!)
+rather than building for the web? What do they get that the web isn't offering?
 
 --
 
 * Offline
 * Push notifications
 * Background sync
+* Multithreading
 
 ???
 
-Offline support, push
- notifications, background sync. Incidentally these are all things that Service Worker brings.
+Well, there are lots of reasons, but here are a handful.
+Offline support, push notifications, background sync, multithreading.
+Incidentally these are all things that Service Worker brings.
 
 ---
 
 # Service Worker 101
-
-* Intercept fetch events, respond with cache (offline)
-* Intercept push events (push)
-* Intercept sync/periodic events (background sync)
 
 ???
 
@@ -284,45 +282,67 @@ So what is a Service Worker exactly, and how does it accomplish this? Well essen
 that acts as a background proxy between your web site and the server. If you've ever worked with Nginx or Apache reverse
 proxies, just imagine you have that, but on the client.
 
+--
+* Intercept fetch events, respond with cache (offline)
+
+???
+
 So you can intercept any request – for images, HTML, CSS, JavaScript, anything – and respond with a cached asset, a
-network asset, or whatever you want.
+network asset, or whatever you want. This allows for very flexible offline scenarios.
+
+--
+* Intercept push events (push)
+
+???
 
 You can also register for push events, which allows you to do push notifications or even to push data from the server to
 a client-side database.
 
+--
+* Intercept sync/periodic events (background sync)
+
+???
+
 There is also an emerging spec called Background Sync, which allows you to wake up the Service Worker when the user
-comes online, so that you can sync data from the client to the server. There is also a "periodic sync" spec that would
-allow you to wake up the Service Worker at regular intervals, such as every 30 minutes, or once per day, etc.
+comes online, or on periodic intervals, so that you can send data from the client to the server.
 
 ---
 
-# This is not a copy-pasta job
+# This is not a copy-paste job
 
 ???
 
 Now, it's important to note that this isn't just a copy-paste of what native platforms can do. On Android or iOS, apps
 can register background services that stay awake whenever your device is on, and can do whatever they want, draining
-your battery in the background. You wouldn't want every web site you visit to have those same powers.
-
-In fact, even these slides have a service worker! This is the kind of thing every web site can happily add without
-worrying about becoming a tragedy of the commons situation.
+your battery in the background. This is an enormous power, you wouldn't want every web site you visit to do that.
 
 --
-
 * Only HTTPS
+
+???
+
+You see, Service Worker is designed very intelligently to avoid these kinds of problems.
+
+First off, it's only available on HTTPS, so only trusted sites can use it, and you won't get MiTM'd.
+
+--
 * Fire-and-forget
+
+???
+
+Second, it's designed in a "fire and forget" model. The browser is free to terminate and restart
+a Service Worker whenever it wants to. You're not supposed to use it for long-running background processes.
+You're supposed to respond to fetch, push, and sync events and respond in a timely manner.
+
+--
 * Notifications require permission
 
 ???
 
-You see, Service Worker is designed very intelligently to avoid these kinds of problems. First off, it's only available on HTTPS,
-so you won't get MiTM attacked. Second, it's designed in a sort of "fire and forget" way. The browser is free to kill
-off a Service Worker whenever it wants to. Unlike a web worker, you're not supposed to have long-running processes
-in there; if you do, then they might get unceremoniously terminated. You're suposed to respond to fetch, push, and sync
-events and respond in a timely manner.
+Also, if you want to send notifications, the user has to explicitly grant permission, and can revoke it at any time.
 
-So like with Flash and Silverlight vs HTML5, this isn't a case where we just copied what the proprietary platforms
-were doing and called that a standard. The web took a look at the context around it, and borrowed the best bits
+So as with Flash and Silverlight vs HTML5, this isn't a case where the web just copied what the proprietary platforms
+were doing and called that a standard. The web looked at the context around it, and borrowed the best bits
 while avoiding potential abuse.
 
 ---
@@ -332,27 +352,35 @@ while avoiding potential abuse.
 ???
 
 So, I work on the Microsoft Edge team. What is Edge doing to promote Service Worker and the new opportunities it unlocks?
-Well, we're implementing it! Chrome and Firefox have already shipped their implementation of Service Worker, and we're
-set to be the fourth implementation. The WebKit team was also in attendance at the most recent face-to-face meeting of
-the Service Worker working group, so they've shown interest. They've also implemented the "fetch" API, which is an
-important prerequisite for implementing Service Worker.
+
+Well, for one thing, we're implementing it! Chrome and Firefox have already shipped their implementation of Service Worker, and we're
+set to be the third implementation.
 
 --
 
 * Runs as a Windows service
 * Can wake up the browser even when the browser is closed
+
+???
+
+Our implementation isn't out yet, but there are a few interesting directions we're going with Service Worker.
+
+Unlike other vendors, on desktop at least, we're experimenting with running the Service Worker as a Windows background service, meaning
+that it would have the ability to wake up the browser from a push notification or sync event, even if the browser is
+closed.
+
+--
 * May spawn multiple Service Workers at once for performance (under debate)
 
 ???
 
-Our implementation isn't out yet, but there are a few interesting directions we're going with Service Worker. Unlike other
-vendors, on desktop at least, we're experimenting with running the Service Worker as a Windows background service, meaning
-that it would have the ability to wake up the browser from a push notification or sync event, even if the browser was
-currently closed.
- 
-We're also experimenting with the ability to launch multiple Service Workers per origin. This may be an important
-optimization for sites whose Service Workers are handling lots of concurrent requests, but it's also not guaranteed
-this will make it into the final version.
+We're also experimenting with the ability to launch multiple Service Workers per origin, so that we can parallelize
+the work that the Service Worker is doing. This may not make it into our final design, but it's being discussed by the
+vendors. Apple is interested in this model too, but Chrome and Firefox currently only run one Service Worker per origin.
+
+This is a good reason, though, to continue designing your Service Worker in a "fire-and-forget" way. It allows browser
+vendors to optimize by terminating, restarting, or running multiple Service Workers as necessary. Don't rely on in-memory
+state in your Service Worker!
 
 ---
 
@@ -372,7 +400,7 @@ App Manifest API.
 
 ???
 
-We're very ambitious in our goals: we want Progressive Web Apps to feel like full-fledged native apps.
+We're very ambitious in our goals. Here's my coworker Jacob Rossi describing what we want to do with PWAs.
 
 ---
 
@@ -385,36 +413,36 @@ What will this look like? Our current plan looks like this:
 --
 
 - Bing crawls web sites
-- Any sites with an App Manifest are ingested into Windows Store
-- Webpps in the store are true apps
-- Site owners can "claim" their sites
+- Sites with a manifest go into the Windows Store
+- These webapps are _real_ apps
 
 ???
 
-(read slide) So essentially, Progressive Web Apps on Windows will really look and feel like native apps. You can Alt-Tab
-to switch between apps, you can launch them from the app bar.
+Well, our plan is for Bing to crawl web sites, and automatically convert any sites with a Web App Manifest into a PWA,
+which is then ingested into the Windows Store. And these will be true apps – you can Alt-Tab them, you can save it to your desktop,
+you can uninstall them, they have their own storage, etc.
+
+So essentially, Progressive Web Apps on Windows will really look and feel like native apps.
 
 ---
 
-# PWAs across the Windows ecosystem
+# Your PWA will be a 
 
-- Windows 10 desktop
-- Windows 10 phone
-- XBox
-- HoloLens
+- Windows Desktop app
+- Windows Phone app
+- XBox app
+- HoloLens app
 
 ???
 
-And better yet, PWAs will run anywhere that Windows 10 runs. You build a web site, and suddenly you've got a desktop app,
-a phone app, an XBox app, and a HoloLens app.
-
-We want the web to be a true first-class citizen on all of these systems. Which is why this is what we're really aiming for.
+And better yet, PWAs will run anywhere that Windows 10 runs. The idea is that you 
+build a web site, and suddenly you've got a desktop app, a phone app, an XBox app, and a HoloLens app.
 
 This is just a snapshot of our current plans, but we're on schedule to ship this soon in an upcoming Edge release.
 
 ---
 
-# Web skepticism
+# Pushing back
 
 > "Pushing the web forward currently means cramming in more copies of native functionality at breakneck speed — interesting stuff, mind you, but there’s just too much of it."
 
@@ -422,13 +450,30 @@ This is just a snapshot of our current plans, but we're on schedule to ship this
 
 ???
 
-Now, I've made some statements about how the web platform is trying to catch up with native.
+Now, I've made some statements about how we're trying to "push the web forward," in particular by catching up with native.
 
-Some folks in the web community bristle at this idea. "The web shouldn't just try to imitate native."
+Some folks in the web community bristle at this idea. As PPk says in "stop pushing the web forward," (read quote).
 
-They worry that the web is going to lose some fundamental webbiness by borrowing from other platforms. But it's always been this way.
+---
 
-It's easy to take the web for granted. But the web doesn't exist in a vacuum; it has a context. And it has to adapt within that context to remain relevant.
+# Pushing back (cont.)
+
+> "People seem to be so caught up in the attempt to get native-like functionality that they’re willing to give up the very things that make the web great."
+
+.footnote[.right[– ["Regressive web apps," Jeremy Keith (2016)](https://adactio.com/journal/10708)]]
+
+???
+
+Or as Jeremy Keith says, in a milder rebuke (read quote).
+
+There is a worry here that the web is going to lose some fundamental webbiness by borrowing from other platforms. I think
+this concern comes from a good place, and I think it's a good discussion to ahve. But I also think these fears are unfounded,
+because it's _always_ been this way with the web.
+
+The web doesn't exist in a vacuum; it has a context. And it has to adapt within that context to remain relevant.
+
+Just as we did with Flash and Silverlight, we'll borrow the best bits from native platforms. But it's not a copy-paste job;
+the web will retain its fundamental webbiness.
 
 ---
 
@@ -436,4 +481,102 @@ It's easy to take the web for granted. But the web doesn't exist in a vacuum; it
 
 ???
 
-The web is like David Bowie. Yes, it changes from decade to decade. Yes, maybe it didn't always invent musical genre or hairstyle that he made famous. But Bowie is still identifiable from year to year. And when he does borrow something from the context around him, be it glam rock or kraut rock, he does it *best*. That's the web.
+In a sense, the web is kind of like David Bowie.
+
+Bowie changed wildly from decade to decade, and he often borrowed or outright stole from the context around him when
+he explored new musical genres, themes, and hairstyles. But there's still an identifiable thread of Bowie-ness that you can see throughout his career.
+
+And when he did borrow something from the context around him, be it glam rock or kraut rock, he did it _best_. That's the web.
+
+---
+
+# Keeping the web awesome
+
+???
+
+So I've talked a lot about what browser vendors are doing to bring these new features to the web platform. But you're all
+web developers – what can you do to keep it awesome?
+
+--
+## What makes the web great?
+
+???
+
+Well, I would say you should just keep in mind what makes the web great, what makes it worth defending.
+
+It's not necessarily the most cutting-edge platform.
+It doesn't always have the latest features. It might not boast the most seamless developer environment.
+
+---
+
+# The web is the freest platform
+
+???
+
+But the web is unique in that it's the one platform that isn't owned by any one person or organization. As Anne van Kesteren has said,
+[the web is a _public good_](https://annevankesteren.nl/presentations/lucerne).
+
+Anyone in the world can make a web site, and in principle anyone in the world can make their own web browser,
+as recent examples like Vivaldi and Brave have shown.
+
+---
+
+background-image: url(img/webworks.png)
+
+???
+
+This is a mural we have in the Edge office, created by the wonderful JThree Concepts. The title is "The web works for everyone."
+So this is my challenge to you: remember what makes the web awesome – that it's not about any one browser, or any one vendor – and
+make sure that your web sites really do work for everyone.
+
+Yes, I know you probably develop primarily in Chrome. Fire up Firefox from time to time! See what your site looks like in Safari.
+Test it out in Edge!
+
+Go grab a cheap Windows laptop or an old Android phone and make sure your site performs well for users who can't afford a 16-core MacBook Pro.
+
+---
+
+# Yes, I know you're on a Mac
+
+???
+
+And quick side note: yes, I know you're probably on a Mac. But if you want to test IE or Edge, we have free virtual machines.
+
+--
+
+## Free IE/Edge VMs: http://edge.ms
+
+???
+
+You can go to edge dot ms and get a free VM. Here's the URL; go here and click Tools -> Virtual Machines, and load it up in VirtualBox. I'll wait.
+
+---
+
+# Use progressive enhancement!
+
+???
+
+Note I'm not asking you to make your web sites look amazing in every browser. Actually I prefer the opposite – use progressive
+enhancement!
+
+Features like Service Worker should work great for browsers that support Service Worker, and just okay for
+browsers that don't. That's great, because that's what encourages my team to actually build the feature! And it's what
+might encourage the other browser vendor that we all want to implement Service Worker to implement it.
+
+If you don't use the feature,
+browser vendors have no reason to implement it.
+
+---
+
+# Moving the web forward, together
+
+???
+
+So that, to me, this is the true definition of "move the web forward." As browser vendors, we'll work hard
+to bring those much-desired features from proprietary platforms that you developers want so badly, as we've done with
+Flash and Silverlight, and as we're now doing with native mobile platforms.
+
+All we ask in return
+is that you work with us to make sure the web doesn't work for just one browser, or just one vendor. Even as the web
+becomes more "appy," let's make sure the web remains open, and pluralistic, and that it works for everyone regardless
+of their device or browser. Thank you.
