@@ -584,3 +584,9 @@ is that you help make sure the web doesn't work for just one browser or just one
 
 Even as the web becomes more "appy," let's make sure the web remains open, and pluralistic, and that it works for everyone regardless
 of their device or browser. Thank you.
+
+---
+
+# Thank you
+
+## nolanlawson.github.io/dotjs-2016
