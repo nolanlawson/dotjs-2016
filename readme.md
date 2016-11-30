@@ -50,7 +50,7 @@ we throw out our Javascript framework every 2 years! – but in this case it's d
 
 ---
 
-# 2004: Existential crisis for the web
+# 2004: Beginnings of HTML5
 
 ???
 
@@ -111,8 +111,6 @@ So at the time, technologies like Flash and Silverlight posed a real challenge t
 ## In many ways, they were just better
 
 ???
-
-Because in many ways, they were just better.
 
 If you wanted to build really cutting-edge web applications, then Flash,
 Silverlight, and similar technologies were compelling alternatives to the open web, because they had a lot more crucial features that the web lacked.
@@ -378,18 +376,14 @@ state in your Service Worker!
 # PWAs in Microsoft Edge
 
 
-???
-
-We're also working on our own implementation of Progressive Web Apps, as part of our work on Service Worker and the new
-App Manifest API.
-
---
-
 > "The existing PWA implementations still leave web apps as second-class to native apps in many ways. We want to fix that."
 
 .footnote[.right[– ["The Progress of Web Apps", Jacob Rossi (2016)](https://blogs.windows.com/msedgedev/2016/07/08/the-progress-of-web-apps/)]]
 
 ???
+
+We're also working on our own implementation of Progressive Web Apps, as part of our work on Service Worker and the new
+App Manifest API.
 
 We're very ambitious in our goals. Here's my coworker Jacob Rossi describing what we want to do with PWAs.
 
@@ -497,25 +491,21 @@ It might not boast the most seamless developer experience.
 
 ---
 
-# The web is the freest platform
-
-???
-
-But the web is unique in that it's the one platform that isn't owned by any one person or organization. As Anne van Kesteren has said,
-[the web is a _public good_](https://annevankesteren.nl/presentations/lucerne).
-
-Anyone in the world can make a web site, and the standards behind web browsers are designed out in the open.
-
----
-
 background-image: url(img/webworks.png)
 
 ???
+
+But what makes the web great is that it's the _freest platform_.
+
+It's the one platform that isn't owned by any one person or organization. As Anne van Kesteren has said,
+[the web is a _public good_](https://annevankesteren.nl/presentations/lucerne).
 
 This is a mural we have in the Edge office, created by the wonderful JThree Concepts. The title is "The web works for everyone."
 
 I really love this vision of the web as a diverse place where all kinds of people with all kinds of browsers and devices can
 enjoy this one experience together.
+
+The web isn't about just one device or just one browser. It's about building something for everyone.
 
 ---
 
