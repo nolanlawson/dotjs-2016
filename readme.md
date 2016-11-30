@@ -21,17 +21,19 @@ Alternative title for my French audience: "Service Workers and web appy-ness." F
 Now, if you're a web developer, you've probably heard a lot about Service Workers. How they're going to "revolutionize" the
 web platform. How they change everything.
 
---
-
-- They're hot <span class="emoji">&#x0001f525;</span>
-- They "move the web forward"
-
 ???
 
 So if you know nothing else about Service Workers, what can you conclude? Well, they're certainly 
 hot, and they "move the web forward."
 
 But what exactly does "move the web forward" mean?
+
+--
+
+- They're hot <span class="emoji">&#x0001f525;</span>
+
+--
+- They "move the web forward"
 
 ---
 
@@ -46,16 +48,6 @@ Well, to understand what "move the web forward" means, you need to take a look a
 believer that history can provide valuable lessons for the future – I know, a controversial opinion an industry where
 we throw out our Javascript framework every 2 years! – but in this case it's definitely true.
 
---
-
-> "History doesn't repeat itself, but it does rhyme."
-
-.footnote[.right[– [Modern proverb](https://en.wikiquote.org/wiki/Talk:History)]]
-
-???
-
-As the proverb goes, "history doesn't repeat itself, but it does rhyme."
-
 ---
 
 # 2004: Existential crisis for the web
@@ -65,7 +57,8 @@ As the proverb goes, "history doesn't repeat itself, but it does rhyme."
 So let's flash back to 2004, which is around the time HTML5 got started, in
 one of the earliest efforts to really "push the web forward." What was motivating it?
 
-Well, let's remember the context of the time. IE6 was the most popular browser, with [80% market share](http://news.bbc.co.uk/2/hi/technology/4037833.stm). The other top browsers were IE5 and IE4, adding up to 95% market share for IE. Firefox and Opera took up about 5% combined. So IE6 was the average user experience; it was a much less capable web than we have today..
+Well, let's remember the context of the time. IE6 was the most popular browser, with [80% market share](http://news.bbc.co.uk/2/hi/technology/4037833.stm).
+Older versions of IE took up another 15%. IE6 was the state-of-the-art for the web platform, so it was a 
 
 At the same time, the W3C (the standards body that defines the web) was focused on semantic web and XHTML 2, but not so much on web apps, on so called "rich" web experiences.
 
@@ -228,25 +221,11 @@ it's native apps, which are feeding off the web, and arguably killing the web.
 
 ---
 
-# Native apps dominate
-
-> "Mobile users spend 18x more time in apps than on the web."
-
-.footnote[.right[– [Luke Wroblewski (2015)](http://www.lukew.com/ff/entry.asp?1954)]]
-
-???
-
-As a share of user attention, native mobile apps are clearly winning. (Read quote.) You can argue whether or not this is the right
-metric, but it's the reverse of desktop. Ask yourself: on desktop, do you use a web browser or a native app for email?
-Now what about mobile? For most folks, it's the exact opposite.
-
----
-
 # Progressive Web Apps: a new hope
 
 ???
 
-So in a sense, this is where Progressive Web Apps (or PWAs) come in. In the same way
+This is where Progressive Web Apps (or PWAs) come in. In the same way
 that HTML5 was a response to the challenges presented by Flash and Silverlight, PWAs are a response to native mobile apps.
 
 --
@@ -290,8 +269,7 @@ Incidentally these are all things that Service Worker brings.
 ???
 
 So what is a Service Worker exactly, and how does it accomplish this? Well essentially, a Service Worker is a web worker
-that acts as a background proxy between your web site and the server. If you've ever worked with Nginx or Apache reverse
-proxies, just imagine you have that, but on the client.
+that acts as a background proxy between your web site and the server.
 
 --
 * Intercept fetch events, respond with cache
@@ -337,7 +315,7 @@ You see, Service Worker is designed very intelligently to avoid these kinds of p
 First off, it's only available on HTTPS, so only trusted sites can use it, and you won't get MiTM'd.
 
 --
-* Fire-and-forget
+* Ephemeral
 
 ???
 
@@ -369,19 +347,21 @@ set to be the third implementation.
 
 --
 
-* Runs as a Windows service
-* Can wake up the browser even when the browser is closed
+* Runs as a Windows background process
+
+--
+* Can wake up the browser even when closed
 
 ???
 
 Our implementation isn't out yet, but there are a few interesting directions we're going with Service Worker.
 
-Unlike other vendors, on desktop at least, we're experimenting with running the Service Worker as a Windows background service, meaning
+Unlike other vendors, on desktop at least, we're planning to run the Service Worker as a Windows background process, meaning
 that it would have the ability to wake up the browser from a push notification or sync event, even if the browser is
 closed.
 
 --
-* May spawn multiple Service Workers at once for performance (under debate)
+* May spawn multiple Service Workers at a time
 
 ???
 
@@ -389,13 +369,13 @@ We're also experimenting with the ability to launch multiple Service Workers per
 the work that the Service Worker is doing. This may not make it into our final design, but it's being discussed by the
 vendors. Apple is interested in this model too, but Chrome and Firefox currently only run one Service Worker per origin.
 
-This is a good reason, though, to continue designing your Service Worker in a "fire-and-forget" way. It allows browser
+This is a good reason, though, to continue designing your Service Worker in an ephemeral way. It allows browser
 vendors to optimize by terminating, restarting, or running multiple Service Workers as necessary. Don't rely on in-memory
 state in your Service Worker!
 
 ---
 
-# Progressive web apps in Microsoft Edge
+# PWAs in Microsoft Edge
 
 
 ???
@@ -415,39 +395,51 @@ We're very ambitious in our goals. Here's my coworker Jacob Rossi describing wha
 
 ---
 
-# PWAs on Windows: current plan
+# PWAs on Windows: preview
 
 ???
 
 What will this look like? Our current plan looks like this:
 
---
-
-- Bing crawls web sites
-- Sites with a manifest go into the Windows Store
-- These webapps are _real_ apps
-
 ???
 
-Well, our plan is for Bing to crawl web sites, and automatically convert any sites with a Web App Manifest into a PWA,
-which is then ingested into the Windows Store. And these will be true apps – you can Alt-Tab them, you can save it to your desktop,
-you can uninstall them, they have their own storage, etc.
+Currently we have a thing called HWAs, which are sort of like Cordova for Windows – they're WebView wrapper apps. You
+can build them from PWAs using ManifoldJS.
 
-So essentially, Progressive Web Apps on Windows will really look and feel like native apps.
+Our plan is to convert these automatically to HWAs under the hood. Maybe Bing will crawl them and put them in the Windows
+store. Maybe the browser itself will do it when you click a prompt. We haven't decided on a final design yet, so I'd
+love to hear your feedback on this.
+
+Either way, Progressive Web Apps on Windows will really look and feel like native apps, because they'll be real apps.
+
+--
+* Hosted Web Apps: current solution
+
+--
+* [ManifoldJS](http://manifoldjs.com/): tool to convert PWAs to HWAs
+
+--
+* Automate that process (TBD)
+
+--
+* These PWAs are _real_ Windows apps
 
 ---
 
-# Your PWA will be a 
-
-- Windows Desktop app
-- Windows Phone app
-- XBox app
-- HoloLens app
+# Our dream: every PWA is now a
 
 ???
 
 And better yet, PWAs will run anywhere that Windows 10 runs. The idea is that you 
 build a web site, and suddenly you've got a desktop app, a phone app, an XBox app, and a HoloLens app.
+
+--
+* Windows Desktop app
+* Windows Mobile app
+* Xbox app
+* HoloLens app
+
+???
 
 This is just a snapshot of our current plans, but we're on schedule to ship this soon in an upcoming Edge release.
 
@@ -465,26 +457,8 @@ Now, I've made some statements about how we're trying to "push the web forward,"
 
 Some folks in the web community bristle at this idea. As PPk says in "stop pushing the web forward," (read quote).
 
----
-
-# Pushing back (cont.)
-
-> "People seem to be so caught up in the attempt to get native-like functionality that they’re willing to give up the very things that make the web great."
-
-.footnote[.right[– ["Regressive web apps," Jeremy Keith (2016)](https://adactio.com/journal/10708)]]
-
-???
-
-Or as Jeremy Keith says, in a milder rebuke (read quote).
-
-There is a worry here that the web is going to lose some fundamental webbiness by borrowing from other platforms. I think
-this concern comes from a good place, and I think it's a good discussion to ahve. But I also think these fears are unfounded,
-because it's _always_ been this way with the web.
-
-The web doesn't exist in a vacuum; it has a context. And it has to adapt within that context to remain relevant.
-
-Just as we did with Flash and Silverlight, we'll borrow the best bits from native platforms. But it's not a copy-paste job;
-the web will retain its fundamental webbiness.
+Now, I think these kinds of worries are coming from a good place, and I think this is a good discussion, but I think
+these fears are unfounded. This has always been the case with the web.
 
 ---
 
@@ -508,15 +482,18 @@ And when he did borrow something from the context around him, be it glam rock or
 So I've talked a lot about what browser vendors are doing to bring these new features to the web platform. But you're all
 web developers – what can you do to keep it awesome?
 
+Well, I would say you should just keep in mind what makes the web great, what makes it worth defending.
+
 --
-## What makes the web great?
+> "The web is not fashionable."
+
+.footnote[.right[– [Ada Rose Edwards](https://medium.com/@Lady_Ada_King/the-web-is-not-fashionable-b1b65c600e0b)]]
 
 ???
 
-Well, I would say you should just keep in mind what makes the web great, what makes it worth defending.
-
-It's not necessarily the most cutting-edge platform.
-It doesn't always have the latest features. It might not boast the most seamless developer environment.
+As Ada Rose Edwards says in this quote I really love, the web is not fashionable.
+It's not necessarily the most cutting-edge platform.It doesn't always have the latest features.
+It might not boast the most seamless developer experience.
 
 ---
 
@@ -527,8 +504,7 @@ It doesn't always have the latest features. It might not boast the most seamless
 But the web is unique in that it's the one platform that isn't owned by any one person or organization. As Anne van Kesteren has said,
 [the web is a _public good_](https://annevankesteren.nl/presentations/lucerne).
 
-Anyone in the world can make a web site, and the standards behind web browsers are designed out in the open, unencumbered
-by patents, or royalties, or censors, or gatekeepers.
+Anyone in the world can make a web site, and the standards behind web browsers are designed out in the open.
 
 ---
 
@@ -543,7 +519,7 @@ enjoy this one experience together.
 
 ---
 
-# Test on more than one browser!
+# Embrace web pluralism
 
 ???
 
@@ -553,25 +529,11 @@ Give Edge a whirl!
 And especially, go grab a cheap Windows laptop or an old Android phone and make sure your site performs well for users who can't afford a 16-core MacBook Pro.
 
 --
-## Free IE/Edge VMs: http://edge.ms
+## IE/Edge VMs: http://edge.ms
 
 ???
 
 And quick side note: if you're on a Mac and you want to test IE or Edge, we have free virtual machines.
-
----
-
-# Use progressive enhancement!
-
-???
-
-Note I'm not asking you to make your web sites look amazing in every browser. Actually I prefer the opposite – use progressive
-enhancement!
-
-Features like Service Worker should work great for browsers that support Service Worker, and just okay for
-browsers that don't. That's great, because that's what encourages browser vendors to actually build the feature!
-
-If you don't use the feature, browser vendors have no reason to implement it.
 
 ---
 
