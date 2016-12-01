@@ -100,7 +100,7 @@ Ian Hickson, Godfather of HTML5, also said ["we were really scared of Silverligh
 
 ---
 
-# Flash/Silverlight/etc posed a real threat
+# Flash/Silverlight posed a real threat
 
 ???
 
