@@ -1,12 +1,13 @@
-importScripts('https://unpkg.com/sw-toolbox@3.4.0/sw-toolbox.js')
+importScripts('sw-toolbox.js')
 toolbox.options.debug = true
 
 toolbox.precache([
   './',
-  './readme.md',
-  './script.js',
-  './style.css',
-  'https://remarkjs.com/downloads/remark-latest.min.js',
+  'readme.md',
+  'script.js',
+  'style.css',
+  'remark.min.js',
+  'sw-toolbox.js',
   'img/app_store.png',
   'img/bowie.jpg',
   'img/flash.png',
@@ -14,7 +15,6 @@ toolbox.precache([
   'img/slight.png',
   'img/webworks.png'
 ])
-
-toolbox.router.get('/(.*)', toolbox.fastest, {
+toolbox.router.get('.*', toolbox.fastest, {
   origin: /.*/
 })
