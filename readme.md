@@ -21,26 +21,16 @@ Alternative title for my French audience: "Service Workers and web appy-ness." F
 Now, if you're a web developer, you've probably heard a lot about Service Workers. How they're going to "revolutionize" the
 web platform. How they change everything.
 
-???
-
-So if you know nothing else about Service Workers, what can you conclude? Well, they're certainly 
+So if you know nothing else about Service Workers, what can you conclude? Well, they're certainly
 hot, and they "move the web forward."
 
-But what exactly does "move the web forward" mean?
-
 --
 
-- They're hot <span class="emoji">&#x0001f525;</span>
-
---
-- They "move the web forward"
-
----
-
-# "Move the web forward"
+## They "move the web forward"
 
 ???
 
+But what exactly does "move the web forward" mean?
 We hear this phrase bandied around a lot, but 
 what direction is the web moving in? Why does it need to move at all? Why is Service Worker an important part of that?
 
@@ -198,10 +188,11 @@ The web may have defeated Flash and Silverlight, but today we have this:
 
 "Download on the App Store." "Get it on Google Play." "Windows Phone version coming soon!" "Amazon Fire version coming soon!" 
 
-Today, for many developers, native mobile platforms offer a compelling alternative to the web. The same apps that are primarily
-consumed via the web on desktop – social networks, email clients, news readers – are today largely consumed via native apps on mobile.
+Because it turned out that the web only really won on desktop. Those same experiences that on desktop
+are largely consumed via the open web – social media, email, news readers – on mobile, they're largely
+consumed via native apps.
 
-It turns out the web only really won on desktop. When mobile devices, and their accompanying app ecosystems, started to grow dominant, the web was largely unprepared. HTML5 wasn't enough.
+And once again, you can't really blame developers for flocking to these platforms. For the rich experiences they're trying to build, these platforms obviously offer something that the web can't. Once again, people are voting with their feet, against the web.
 
 ---
 
@@ -370,72 +361,6 @@ vendors. Apple is interested in this model too, but Chrome and Firefox currently
 This is a good reason, though, to continue designing your Service Worker in an ephemeral way. It allows browser
 vendors to optimize by terminating, restarting, or running multiple Service Workers as necessary. Don't rely on in-memory
 state in your Service Worker!
-
----
-
-# PWAs in Microsoft Edge
-
-
-> "The existing PWA implementations still leave web apps as second-class to native apps in many ways. We want to fix that."
-
-.footnote[.right[– ["The Progress of Web Apps", Jacob Rossi (2016)](https://blogs.windows.com/msedgedev/2016/07/08/the-progress-of-web-apps/)]]
-
-???
-
-We're also working on our own implementation of Progressive Web Apps, as part of our work on Service Worker and the new
-App Manifest API.
-
-We're very ambitious in our goals. Here's my coworker Jacob Rossi describing what we want to do with PWAs.
-
----
-
-# PWAs on Windows: preview
-
-???
-
-What will this look like? Our current plan looks like this:
-
-???
-
-Currently we have a thing called HWAs, which are sort of like Cordova for Windows – they're WebView wrapper apps. You
-can build them from PWAs using ManifoldJS.
-
-Our plan is to convert these automatically to HWAs under the hood. Maybe Bing will crawl them and put them in the Windows
-store. Maybe the browser itself will do it when you click a prompt. We haven't decided on a final design yet, so I'd
-love to hear your feedback on this.
-
-Either way, Progressive Web Apps on Windows will really look and feel like native apps, because they'll be real apps.
-
---
-* Hosted Web Apps: current solution
-
---
-* [ManifoldJS](http://manifoldjs.com/): tool to convert PWAs to HWAs
-
---
-* Automate that process (TBD)
-
---
-* These PWAs are _real_ Windows apps
-
----
-
-# Our dream: every PWA is now a
-
-???
-
-And better yet, PWAs will run anywhere that Windows 10 runs. The idea is that you 
-build a web site, and suddenly you've got a desktop app, a phone app, an XBox app, and a HoloLens app.
-
---
-* Windows Desktop app
-* Windows Mobile app
-* Xbox app
-* HoloLens app
-
-???
-
-This is just a snapshot of our current plans, but we're on schedule to ship this soon in an upcoming Edge release.
 
 ---
 
