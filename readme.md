@@ -427,7 +427,7 @@ It's the one platform that isn't owned by any one person or organization. As Ann
 
 This is a mural we have in the Edge office, created by the wonderful JThree Concepts. The title is "The web works for everyone."
 
-I really love this vision of the web as a diverse place where all kinds of people with all kinds of browsers and devices can
+I really love this vision of the web as a **riotous**, **chaotic**, **diverse** place where all kinds of people with all kinds of browsers and devices can
 enjoy this one experience together.
 
 The web isn't about just one device or just one browser. It's about building something for everyone.
@@ -460,11 +460,7 @@ So that, to me, this is the true definition of "move the web forward." As browse
 to bring those much-desired features from other platforms that you developers are clamoring for, as we've done with
 Flash and Silverlight, and as we're now doing with native mobile platforms.
 
-And you can – and should! – use these awesome new features. All we ask in return
-is that you help make sure the web doesn't work for just one browser or just one vendor.
-
-Even as the web becomes more "appy," let's make sure the web remains open, and pluralistic, and that it works for everyone regardless
-of their device or browser. Thank you.
+But please keep in mind what makes the web worth fighting for in the first place. We'll give you these awesome features, we'll make the web increasingly "appy," and all we ask is that you help us ensure that the web remains <strong>open</strong>, and <strong>pluralistic</strong>, and that the web really works for everyone. Thank you.
 
 ---
 
