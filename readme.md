@@ -395,12 +395,6 @@ Some folks in the web community bristle at this idea. As PPk says in "stop pushi
 Now, I think these kinds of worries are coming from a good place, and I think this is a good discussion, but I think
 these fears are unfounded. This has always been the case with the web.
 
----
-
-# The web is a chameleon
-
-???
-
 And the reason for that is that this has always been the case with the web. The web has always changed to match the context around it. It's never been static. It's always borrowed from other platforms such as Flash and Silverlight, and now with native apps.
 
 ---
