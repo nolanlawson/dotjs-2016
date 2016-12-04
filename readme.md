@@ -77,8 +77,6 @@ So what were these rising threats?
 * XUL (Mozilla)
 * Silverlight/Avalon (Microsoft)
 
-> "The usual suspects have been rushing in to stake their turf in the emerging 'rich app' market."
-
 .footnote[.right[– [Chris Kaminski, Web Standards Project (2004)](http://www.webstandards.org/2004/10/01/the-web-as-platform/)]]
 
 ???
@@ -244,6 +242,8 @@ rather than building for the web? What do they get that the web isn't offering?
 --
 
 * Offline
+* Push notifications
+* Background sync
 
 ???
 
@@ -251,17 +251,7 @@ Well, there are lots, but here are a few.
 
 Offline support &ndash; can I trust that this app will open when I tap on the icon, even if I don't have a reliable network connection?
 
---
-* Push notifications
-
-???
-
 Push notifications &ndash; really great for user engagement &ndash; can I provide timely information to my users even when my site/app isn't open?
-
---
-* Background sync
-
-???
 
 Background sync &ndash; isn't it nice when you open a native app you haven't used in a long time, but it still has the freshest content, the freshest emails, the freshest tweets, because it synced in the background?
 
@@ -277,7 +267,7 @@ So what is a Service Worker exactly, and how does it accomplish this? Well essen
 that acts as a background proxy between your web site and the server.
 
 --
-* Intercept fetch events, respond with cache
+* `fetch` events
 
 ???
 
@@ -285,7 +275,7 @@ So you can intercept any request – for images, HTML, CSS, JavaScript, anything
 network asset, or whatever you want. This allows for very flexible offline scenarios.
 
 --
-* Intercept push events
+* `push` events
 
 ???
 
@@ -293,7 +283,8 @@ You can also register for push events, which allows you to do push notifications
 a client-side database.
 
 --
-* Intercept sync/periodic events
+* `sync` events 
+* `periodicsync` events (emerging standard)
 
 ???
 
@@ -412,7 +403,7 @@ And when he did borrow something from the context around him, be it glam rock or
 
 ---
 
-# Keeping the web awesome
+# Keep the web awesome
 
 ???
 
@@ -460,6 +451,8 @@ So my challenge to you is to embrace web pluralism.  Make sure that you're **not
 
 Go grab a cheap Windows laptop or an old Android phone and make sure your site performs well for users who can't afford a 16-core MacBook Pro. If you do, I promise you your site will run _even better_ on the latest and greatest.
 
+Use techniques like progressive enhancement &ndash; Service Worker is a great example of this, since you can make a web site that works fine without it, but works even better with it. And this is great for us browser vendors, because it gives us the incentive to implement those APIs!
+
 --
 ## IE/Edge VMs: http://edge.ms
 
@@ -477,7 +470,7 @@ So that, to me, this is the true definition of "move the web forward." As browse
 to bring those much-desired features from other platforms that you developers are clamoring for, as we've done with
 Flash and Silverlight, and as we're now doing with native mobile platforms.
 
-But please keep in mind what makes the web worth fighting for in the first place &ndash; its diversity. Test in multiple browsers. Use techniques like progressive enhancement &ndash; Service Worker is a great example of this, since you can make a web site that works fine without it, but works even better with it. And this is great for us browser vendors, because it gives us the incentive to implement those APIs!
+But please keep in mind what makes the web worth fighting for in the first place &ndash; its diversity. Test in multiple browsers.
 
 So here's the bargain: we browser vendors will give you web developers these awesome features, we'll make the web increasingly "appy," and all we ask is that you help us ensure that the web remains <strong>open</strong>, and <strong>pluralistic</strong>, and that the web really works for everyone. Thank you.
 
