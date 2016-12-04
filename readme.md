@@ -50,7 +50,7 @@ one of the earliest efforts to really "push the web forward." What was motivatin
 Well, let's remember the context of the time. IE6 was the most popular browser, with [80% market share](http://news.bbc.co.uk/2/hi/technology/4037833.stm).
 Older versions of IE took up another 15%. IE6 was the state-of-the-art for the web platform, so it was a 
 
-At the same time, the W3C (the standards body that defines the web) was focused on semantic web and XHTML 2, but not so much on web apps, on so called "rich" web experiences.
+So IE6 was the state of the art at the time. It was obviously a very different web from the one we have today &ndash; a much less feature-rich web.
 
 --
 
@@ -72,21 +72,23 @@ Their motivating factor? A "rising threat of single-vendor solutions?"
 So what were these rising threats?
 
 --
+* Java (Sun)
+* Flash (Macromedia)
+* XUL (Mozilla)
+* Silverlight/Avalon (Microsoft)
 
-> Many vendors "rushing in to stake their turf":
-> * Java (Sun)
-> * Flash (Macromedia)
-> * XUL (Mozilla)
-> * Silverlight/Avalon (Microsoft)
+> "The usual suspects have been rushing in to stake their turf in the emerging 'rich app' market."
 
 .footnote[.right[– [Chris Kaminski, Web Standards Project (2004)](http://www.webstandards.org/2004/10/01/the-web-as-platform/)]]
 
 ???
 
-Well, as this article from the Web Standards Project says, there were lots of vendors "rushing in to stake their turf"
+Well, as Chris Kaminski from the Web Standards Project says, there were lots of vendors "rushing in to stake their turf"
 in the emerging "rich app" market, including Java, Flash, XUL, and Silverlight (then known as Project Avalon).
 
 Ian Hickson, Godfather of HTML5, also said ["we were really scared of Silverlight"](https://youtu.be/xIxDJof7xxQ).
+
+What these single-vendor solutions were doing was rushing in to fill a void in the web platform. The W3C at the time was mostly interested in semantic web and XHTML 2, not rich "web apps." So these platforms filled that need.
 
 ---
 
@@ -133,8 +135,8 @@ This is where a lot of features of HTML5 come from. This is why we have file upl
 Now, this wasn't a matter of just copy-pasting those APIs from Flash or Silverlight and calling it a day. There was hard work here
 to make sure these APIs were standardized, and that they didn't sacrifice user security, privacy, and performance model of the web for the sake of new features.
 
-But the web didn't just stand still when it was getting outcompeted. It looked at what native platforms like Silverlight and Flash were doing, 
-and made sure it could remain competitive.
+But the web didn't just stand still when it was getting outcompeted. It looked at what proprietary platforms like Silverlight and Flash were doing, 
+and made sure it could remain competitive, even as the context around it changed.
 
 ---
 
@@ -196,7 +198,7 @@ And once again, you can't really blame developers for flocking to these platform
 
 ---
 
-# 2010's: a new threat
+# A new threat
 
 > "There's a new existential threat... It's not Flash and Silverlight – it's native apps, 
 > \[which are\] feeding off the web, and arguably killing the web."
@@ -242,13 +244,27 @@ rather than building for the web? What do they get that the web isn't offering?
 --
 
 * Offline
+
+???
+
+Well, there are lots, but here are a few.
+
+Offline support &ndash; can I trust that this app will open when I tap on the icon, even if I don't have a reliable network connection?
+
+--
 * Push notifications
+
+???
+
+Push notifications &ndash; really great for user engagement &ndash; can I provide timely information to my users even when my site/app isn't open?
+
+--
 * Background sync
 
 ???
 
-Well, there are lots of reasons, but here are a handful.
-Offline support, push notifications, background sync.
+Background sync &ndash; isn't it nice when you open a native app you haven't used in a long time, but it still has the freshest content, the freshest emails, the freshest tweets, because it synced in the background?
+
 Incidentally these are all things that Service Worker brings.
 
 ---
@@ -281,8 +297,8 @@ a client-side database.
 
 ???
 
-There is also an emerging spec called Background Sync, which allows you to wake up the Service Worker when the user
-comes online, or on periodic intervals, so that you can send data from the client to the server.
+There is also a new spec called Background Sync, which allows you to wake up the Service Worker when the user
+comes online, or via an emerging spec called Periodic Sync, on periodic intervals, so that you can send data from the client to the server.
 
 ---
 
@@ -290,8 +306,8 @@ comes online, or on periodic intervals, so that you can send data from the clien
 
 ???
 
-Now, it's important to note that this isn't just a copy-paste of what native platforms can do. On Android or iOS, apps
-can register background services that stay awake whenever your device is on, and can do whatever they want, draining
+Now, it's important to note that this isn't just a copy-paste of what native platforms can do. On native platforms, apps
+can register persistent background services that can do lots of heavy operations in the background, draining
 your battery in the background. This is an enormous power, you wouldn't want every web site you visit to do that.
 
 --
@@ -381,6 +397,14 @@ these fears are unfounded. This has always been the case with the web.
 
 ---
 
+# The web is a chameleon
+
+???
+
+And the reason for that is that this has always been the case with the web. The web has always changed to match the context around it. It's never been static. It's always borrowed from other platforms such as Flash and Silverlight, and now with native apps.
+
+---
+
 .center[<img src="img/bowie.jpg" alt="David Bowie – four albums" height="600" width="600"/>]
 
 ???
@@ -427,7 +451,7 @@ It's the one platform that isn't owned by any one person or organization. As Ann
 
 This is a mural we have in the Edge office, created by the wonderful JThree Concepts. The title is "The web works for everyone."
 
-I really love this vision of the web as a **riotous**, **chaotic**, **diverse** place where all kinds of people with all kinds of browsers and devices can
+I love this vision of the web as a **riotous**, **chaotic**, **diverse** place where all kinds of people with all kinds of browsers and devices can
 enjoy this one experience together.
 
 The web isn't about just one device or just one browser. It's about building something for everyone.
@@ -438,10 +462,9 @@ The web isn't about just one device or just one browser. It's about building som
 
 ???
 
-So even if you primarily develop on Chrome, fire up Firefox from time to time! See what your site looks like in Safari.
-Give Edge a whirl!
+So my challenge to you is to embrace web pluralism.  Make sure that you're **not** making the web all about one vendor or one browser. Test in multiple browsers. Test in multiple devices!
 
-And especially, go grab a cheap Windows laptop or an old Android phone and make sure your site performs well for users who can't afford a 16-core MacBook Pro.
+Go grab a cheap Windows laptop or an old Android phone and make sure your site performs well for users who can't afford a 16-core MacBook Pro. If you do, I promise you your site will run _even better_ on the latest and greatest.
 
 --
 ## IE/Edge VMs: http://edge.ms
@@ -460,7 +483,9 @@ So that, to me, this is the true definition of "move the web forward." As browse
 to bring those much-desired features from other platforms that you developers are clamoring for, as we've done with
 Flash and Silverlight, and as we're now doing with native mobile platforms.
 
-But please keep in mind what makes the web worth fighting for in the first place. We'll give you these awesome features, we'll make the web increasingly "appy," and all we ask is that you help us ensure that the web remains <strong>open</strong>, and <strong>pluralistic</strong>, and that the web really works for everyone. Thank you.
+But please keep in mind what makes the web worth fighting for in the first place &ndash; its diversity. Test in multiple browsers. Use techniques like progressive enhancement &ndash; Service Worker is a great example of this, since you can make a web site that works fine without it, but works even better with it. And this is great for us browser vendors, because it gives us the incentive to implement those APIs!
+
+So here's the bargain: we browser vendors will give you web developers these awesome features, we'll make the web increasingly "appy," and all we ask is that you help us ensure that the web remains <strong>open</strong>, and <strong>pluralistic</strong>, and that the web really works for everyone. Thank you.
 
 ---
 
