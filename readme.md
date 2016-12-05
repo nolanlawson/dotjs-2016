@@ -14,7 +14,7 @@ Alternative title for my French audience: "Service Workers and web appy-ness." F
 
 ---
 
-# Service Workers
+# Service Worker
 
 ???
 
@@ -26,7 +26,7 @@ hot, and they "move the web forward."
 
 --
 
-## They "move the web forward"
+## It "moves the web forward"
 
 ???
 
