@@ -96,11 +96,15 @@ What these single-vendor solutions were doing was rushing in to fill a void in t
 
 So at the time, technologies like Flash and Silverlight posed a real challenge to the open web.
 
+These were proprietary, vendor-specific platforms that were _on_ the web, but not really _of_ the web. In a way, they fed off of the web.
+
 --
 
 ## In many ways, they were just better
 
 ???
+
+And they posted a real threat, because in many ways they were just better.
 
 If you wanted to build really cutting-edge web applications, then Flash,
 Silverlight, and similar technologies were compelling alternatives to the open web, because they had a lot more crucial features that the web lacked.
