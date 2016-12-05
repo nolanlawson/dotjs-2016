@@ -123,16 +123,16 @@ So in this light, the movement towards HTML5, which began in 2004, can be seen a
 --
 * File upload
 * Video
+* Audio
 * Clipboard
 * Canvas
-* SVG
 * Animations
 * etc.
 
 ???
 
 And ultimately this competitive environment was good for the web. 
-This is where a lot of features of HTML5 come from. This is why we have file uploads, video, canvas, clipboard, SVG, CSS animations, etc.
+This is where a lot of features of HTML5 come from. This is why we have file uploads, video, audio, canvas, clipboard, CSS animations, etc.
 
 Now, this wasn't a matter of just copy-pasting those APIs from Flash or Silverlight and calling it a day. There was hard work here
 to make sure these APIs were standardized, and that they didn't sacrifice user security, privacy, and performance model of the web for the sake of new features.
